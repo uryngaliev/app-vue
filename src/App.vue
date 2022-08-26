@@ -1,10 +1,15 @@
 <template>
     <div class="container mx-auto px-4 mt-4">
-        <form @submit.prevent>
-            <input v-model="title" type="text" placeholder="Название">
-            <input v-model="body" type="text" placeholder="Описание">
-            <button @click="createPost">
-                Создать запись
+        <form class="mb-4" @submit.prevent>
+            <div class="flex flex-col py-4">
+                <input class="border border-green-300 py-2 px-2 placeholder-black" v-model="title" type="text"
+                       placeholder="Название">
+                <input class="placeholder-black border border-green-300 py-2 px-2" v-model="body" type="text"
+                       placeholder="Описание">
+            </div>
+            <button @click="createPost"
+                    class="border border-green-300 text-black py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Создать
             </button>
         </form>
         <PostList :posts="posts"/>

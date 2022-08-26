@@ -7,7 +7,3 @@
         name: "PostForm"
     }
 </script>
-
-<style scoped>
-
-</style>
