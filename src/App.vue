@@ -1,13 +1,20 @@
 <template>
-    <nav>
-        <h1 class="text-3xl font-bold underline">
-            Hello world!
-        </h1>
-        <router-link to="/">Home</router-link>
-        |
-        <router-link to="/about">About</router-link>
-        |
-        <router-link :to="{name: 'posts'}">Posts</router-link>
-    </nav>
-    <router-view/>
+    <PostList :posts="posts"/>
 </template>
+
+<script>
+    import PostList from "@/components/PostList";
+
+    export default {
+        components: {PostList},
+        data() {
+            return {
+                posts: [
+                    {title: 'Vue', body: '3'},
+                    {title: 'Vue', body: '3'},
+                    {title: 'Vue', body: '3'},
+                ]
+            }
+        }
+    }
+</script>
