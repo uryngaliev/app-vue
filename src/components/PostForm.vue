@@ -1,8 +1,9 @@
 <template>
     <form class="mb-4" @submit.prevent>
         <div class="flex flex-col py-4">
-            <input class="border border-green-300 py-2 px-2 placeholder-black" v-model="post.title" type="text"
-                   placeholder="Название">
+            <input
+                    class="border border-green-300 py-2 px-2 placeholder-black" v-model="post.title" type="text"
+                    placeholder="Название">
             <input class="placeholder-black border border-green-300 py-2 px-2" v-model="post.body" type="text"
                    placeholder="Описание">
         </div>
@@ -30,8 +31,7 @@
                     title: '',
                     body: '',
                 }
-
-            }
+            },
         }
     }
 </script>
