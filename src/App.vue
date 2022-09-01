@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto px-4 mt-4">
-        <h1>Страница постов</h1>
-        <button @click="showDialog">Создать пост</button>
+        <h1 class="text-xl text-white text-medium bg-green-500 py-2 px-2 mb-4">Страница постов</h1>
+        <my-button class="bg-blue-500 uppercase py-2 px-2 text-white mb-4" @click="showDialog">Создать пост</my-button>
         <my-dialogs v-model:show="dialogVisible">
             <PostForm @create="createPost"/>
         </my-dialogs>
@@ -13,9 +13,10 @@
     import PostList from "@/components/PostList";
     import PostForm from "@/components/PostForm";
     import MyDialogs from "@/components/MyDialogs";
+    import MyButton from "@/components/MyButton";
 
     export default {
-        components: {MyDialogs, PostForm, PostList},
+        components: {MyButton, MyDialogs, PostForm, PostList},
         data() {
             return {
                 posts: [

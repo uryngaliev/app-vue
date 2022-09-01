@@ -7,15 +7,16 @@
             <input class="placeholder-black border border-green-300 py-2 px-2" v-model="post.body" type="text"
                    placeholder="Описание">
         </div>
-        <button @click="createPost"
-                class="border border-green-300 text-black py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        <my-button @click="createPost">
             Создать
-        </button>
+        </my-button>
     </form>
 </template>
 
 <script>
+    import MyButton from "@/components/MyButton";
     export default {
+        components: {MyButton},
         data() {
             return {
                 post: {
